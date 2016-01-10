@@ -212,6 +212,14 @@ html, body {
   z-index: 99;
 }
 
+body {
+  background-color: #F7F3DC;
+}
+
+#logo {
+  margin: 0 auto; width: 605px; height: 150px;
+}
+
 .disNone {
   display: none;
 }
@@ -227,8 +235,12 @@ html, body {
 .mdl-textfield {
   display: block;
 }
+
+.mdl-textfield__label {
+  color: black;
+}
+
 .mdl-data-table {
-  th {text-align: center;}
-  tbody tr, tfoot tr {line-height: 57px;}
-  td {padding: 0 18px 0;}
+  td {padding: 5px 18px 5px 0; vertical-align: middle;}
+  .removeTD {padding-left: 14px;}
 }

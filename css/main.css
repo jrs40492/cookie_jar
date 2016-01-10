@@ -208,6 +208,14 @@ html, body {
 .mdl-demo .mdl-menu__container {
   z-index: 99; }
 
+body {
+  background-color: #F7F3DC; }
+
+#logo {
+  margin: 0 auto;
+  width: 605px;
+  height: 150px; }
+
 .disNone {
   display: none; }
 
@@ -222,9 +230,11 @@ html, body {
 .mdl-textfield {
   display: block; }
 
-.mdl-data-table th {
-  text-align: center; }
-.mdl-data-table tbody tr, .mdl-data-table tfoot tr {
-  line-height: 57px; }
+.mdl-textfield__label {
+  color: black; }
+
 .mdl-data-table td {
-  padding: 0 18px 0; }
+  padding: 5px 18px 5px 0;
+  vertical-align: middle; }
+.mdl-data-table .removeTD {
+  padding-left: 14px; }

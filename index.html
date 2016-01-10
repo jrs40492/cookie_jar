@@ -31,7 +31,7 @@
     <!-- Color the status bar on mobile devices -->
     <meta name="theme-color" content="#2F3BA2">
 
-    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.deep_purple-yellow.min.css" />
+    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.deep_purple-amber.min.css" />
     <script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
@@ -42,93 +42,114 @@
     <!--
     <link rel="canonical" href="http://www.example.com/">
     -->
+    <script src='https://www.google.com/recaptcha/api.js'></script>
   </head>
-  <body>
-    <div>
+  <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
       <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
         <div class="mdl-layout--large-screen-only mdl-layout__header-row">
         </div>
         <div class="mdl-layout--large-screen-only mdl-layout__header-row">
-          <h3>My Cookie Jar</h3>
+          <img id="logo" src="images/mycookiejar.png" alt="My Cookie Jar Logo" title="My Cookie Jar">
         </div>
         <div class="mdl-layout--large-screen-only mdl-layout__header-row">
         </div>
       </header>
-      <div class="mdl-grid">
-        <div class="mdl-cell mdl-cell--8-col">
-          <table id="foodList" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
-            <thead>
-              <tr>
-                <th class="mdl-data-table__cell--non-numeric">Kind</th>
-                <th>
-                  Quantity
-                </th>
-                <th>
-                  Price/Dozen
-                </th>
-                <th>
-                  Remove
-                </th>
-                <th>
-                  Add
-                </th>
-                <th>Total</th>
-              </tr>
-            </thead>
-            <tbody>
-            </tbody>
-            <tfoot>
-              <tr>
-                <td colspan="5">
-                  Order Cost:
-                </td>
-                <td id="orderCost">
-                  $0.00
-                </td>
-              </tr>
-            </tfoot>
-          </table>
+      <main class="mdl-layout__content">
+        <div class="mdl-layout__tab-panel is-active" id="overview">
+          <section class="section--center mdl-grid mdl-shadow--2dp">
+            <div class="mdl-cell mdl-cell--12-col">
+              <p>Welcome to My Cookie Jar! Established in 2016, we offer only the freshest, most delicious cookies and other sweet treats in the Buffalo, NY area.</p>
+              <p>By using the order from below, you can expect fresh homemade cookies delivered to your house within the next 24 hours.</p>
+            </div>
+          </section>
+          <section class="mdl-grid mdl-shadow--2dp">
+            <div class="mdl-cell mdl-cell--8-col">
+              <table id="foodList" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+                <thead>
+                  <tr>
+                    <th class="mdl-data-table__cell--non-numeric">Kind</th>
+                    <th class="mdl-data-table__cell--non-numeric">Photo</th>
+                    <th>Quantity</th>
+                    <th>Price/Dozen</th>
+                    <th class="mdl-data-table__cell--non-numeric">Remove</th>
+                    <th class="mdl-data-table__cell--non-numeric">Add</th>
+                    <th>Total</th>
+                  </tr>
+                </thead>
+                <tbody>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <td colspan="5">
+                      Order Cost:
+                    </td>
+                    <td class="orderCost">
+                      $0.00
+                    </td>
+                  </tr>
+                </tfoot>
+              </table>
+              <div id="imageWrapper"></div>
+            </div>
+            <div class="mdl-cell mdl-cell--4-col">
+              <form onsubmit="return false;">
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                  <input class="mdl-textfield__input" type="text" id="name1">
+                  <label class="mdl-textfield__label" for="name1">First Name*</label>
+                </div>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                  <input class="mdl-textfield__input" type="text" id="name2">
+                  <label class="mdl-textfield__label" for="name2">Last Name*</label>
+                </div>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                  <input class="mdl-textfield__input" type="tel" pattern="-?[0-9()\- ]*(\.[0-9]+)?" id="number">
+                  <label class="mdl-textfield__label" for="number">Phone Number*</label>
+                  <span class="mdl-textfield__error">Input is not a number!</span>
+                </div>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                  <input class="mdl-textfield__input" type="email" id="email">
+                  <label class="mdl-textfield__label" for="email">E-Mail*</label>
+                </div>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                  <input class="mdl-textfield__input" type="text" id="address">
+                  <label class="mdl-textfield__label" for="address">Street Address*</label>
+                </div>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                  <input class="mdl-textfield__input" type="text" id="city">
+                  <label class="mdl-textfield__label" for="city">City*</label>
+                </div>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                  <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="zip">
+                  <label class="mdl-textfield__label" for="zip">Zip*</label>
+                  <span class="mdl-textfield__error">Input is not a number!</span>
+                </div>
+                <div>
+                  Order Total: <span class="orderCost">$0.00</span>
+                </div>
+                <div id='errorMessage' class="disNone"></div>
+                <div class="g-recaptcha" data-sitekey="6Ldb7xQTAAAAAIf04yqawoO0ly2Usi1VnXzyxdsD"></div>
+                <button id="submitButton" class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect">
+                  Submit Order
+                </button>
+              </form>
+            </div>
+          </section>
         </div>
-        <div class="mdl-cell mdl-cell--4-col">
-          <form onsubmit="return false;">
-            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-              <input class="mdl-textfield__input" type="text" id="name1">
-              <label class="mdl-textfield__label" for="name1">First Name*</label>
-            </div>
-            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-              <input class="mdl-textfield__input" type="text" id="name2">
-              <label class="mdl-textfield__label" for="name2">Last Name*</label>
-            </div>
-            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-              <input class="mdl-textfield__input" type="tel" pattern="-?[0-9()\- ]*(\.[0-9]+)?" id="number">
-              <label class="mdl-textfield__label" for="number">Phone Number*</label>
-              <span class="mdl-textfield__error">Input is not a number!</span>
-            </div>
-            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-              <input class="mdl-textfield__input" type="email" id="email">
-              <label class="mdl-textfield__label" for="email">E-Mail*</label>
-            </div>
-            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-              <input class="mdl-textfield__input" type="text" id="address">
-              <label class="mdl-textfield__label" for="address">Street Address*</label>
-            </div>
-            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-              <input class="mdl-textfield__input" type="text" id="city">
-              <label class="mdl-textfield__label" for="city">City*</label>
-            </div>
-            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-              <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="zip">
-              <label class="mdl-textfield__label" for="zip">Zip*</label>
-              <span class="mdl-textfield__error">Input is not a number!</span>
-            </div>
-            <div id='errorMessage' class="disNone"></div>
-            <button id="submitButton" class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect">
-              Submit Order
-            </button>
-          </form>
+      </main>
+      <footer class="mdl-mega-footer">
+        <div class="mdl-mega-footer--bottom-section">
+          <div class="mdl-logo">
+            <img src="images/mycookiejar_small.png" alt="My Cookie Jar Logo Small" title="My Cookie Jar">
+          </div>
+          <ul class="mdl-mega-footer--link-list">
+            <li>My Cookie Jar</li>
+            <li>E-mail: </li>
+            <li>Phone: </li>
+            <li><a href="http://www.jswansol.com" target="_blank">Powered By: Swanson Solutions</a></li>
+          </ul>
         </div>
-      </div>
-
+      </footer>
   </div>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
     <!-- <script>
