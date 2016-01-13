@@ -227,14 +227,36 @@ body {
   color: red;
   font-size: 18px; }
 
+.mdl-grid {
+  padding: 4px; }
+
+.mdl-cell {
+  margin: 4px; }
+
 .mdl-textfield {
   display: block; }
 
 .mdl-textfield__label {
   color: black; }
 
-.mdl-data-table td {
-  padding: 5px 18px 5px 0;
-  vertical-align: middle; }
-.mdl-data-table .removeTD {
-  padding-left: 14px; }
+#tableWrapper .mdl-typography--display-1 {
+  text-align: center;
+  padding: 10px 0 5px;
+  text-decoration: underline; }
+
+.mdl-data-table {
+  white-space: normal; }
+  .mdl-data-table th {
+    padding: 0 11px; }
+  .mdl-data-table td {
+    padding: 5px 18px 5px 0;
+    vertical-align: middle;
+    width: 13%; }
+    .mdl-data-table td:first-child {
+      width: 40%; }
+  .mdl-data-table td.modifyTD {
+    width: 20%; }
+  .mdl-data-table .removeTD {
+    padding-left: 14px; }
+  .mdl-data-table .decrement, .mdl-data-table .increment {
+    margin: 0 6%; }

@@ -232,6 +232,14 @@ body {
   color: red; font-size: 18px;
 }
 
+.mdl-grid {
+  padding: 4px;
+}
+
+.mdl-cell {
+  margin: 4px;
+}
+
 .mdl-textfield {
   display: block;
 }
@@ -240,7 +248,17 @@ body {
   color: black;
 }
 
+#tableWrapper {
+  .mdl-typography--display-1 {text-align: center; padding: 10px 0 5px; text-decoration: underline;}
+}
+
 .mdl-data-table {
-  td {padding: 5px 18px 5px 0; vertical-align: middle;}
+  white-space: normal;
+  th {padding: 0 11px;}
+  td {padding: 5px 18px 5px 0; vertical-align: middle; width: 13%;
+    &:first-child {width: 40%}
+  }
+  td.modifyTD {width: 20%;}
   .removeTD {padding-left: 14px;}
+  .decrement, .increment {margin: 0 6%;}
 }

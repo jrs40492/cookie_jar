@@ -1,5 +1,5 @@
 <?php require_once('check_login_status.php');
-$getFoodSql = 'SELECT * FROM foods';
+$getFoodSql = 'SELECT * FROM foods ORDER BY Name';
 $getFoodQuery = mysqli_query($conx, $getFoodSql);
 while ($food = mysqli_fetch_assoc($getFoodQuery)) {
   $data[] = $food;

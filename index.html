@@ -64,35 +64,12 @@
             </div>
           </section>
           <section class="mdl-grid mdl-shadow--2dp">
-            <div class="mdl-cell mdl-cell--8-col">
-              <table id="foodList" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
-                <thead>
-                  <tr>
-                    <th class="mdl-data-table__cell--non-numeric">Kind</th>
-                    <th class="mdl-data-table__cell--non-numeric">Photo</th>
-                    <th>Quantity</th>
-                    <th>Price/Dozen</th>
-                    <th class="mdl-data-table__cell--non-numeric">Remove</th>
-                    <th class="mdl-data-table__cell--non-numeric">Add</th>
-                    <th>Total</th>
-                  </tr>
-                </thead>
-                <tbody>
-                </tbody>
-                <tfoot>
-                  <tr>
-                    <td colspan="5">
-                      Order Cost:
-                    </td>
-                    <td class="orderCost">
-                      $0.00
-                    </td>
-                  </tr>
-                </tfoot>
-              </table>
+            <div class="mdl-cell mdl-cell--8-col mdl-cell--12-col-tablet mdl-cell--12-col-phone">
+              <div id="tableWrapper"></div>
               <div id="imageWrapper"></div>
             </div>
-            <div class="mdl-cell mdl-cell--4-col">
+            <div class="mdl-cell mdl-cell--4-col mdl-cell--12-col-tablet mdl-cell--12-col-phone">
+              <div class="class="mdl-cell--12-col"">
               <form onsubmit="return false;">
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                   <input class="mdl-textfield__input" type="text" id="name1">
@@ -134,23 +111,23 @@
                 </button>
               </form>
             </div>
+            </div>
           </section>
         </div>
       </main>
-      <footer class="mdl-mega-footer">
-        <div class="mdl-mega-footer--bottom-section">
+      <footer class="mdl-mini-footer">
+        <div class="mdl-mini-footer__left-section">
           <div class="mdl-logo">
-            <img src="images/mycookiejar_small.png" alt="My Cookie Jar Logo Small" title="My Cookie Jar">
+            My Cookie Jar
           </div>
-          <ul class="mdl-mega-footer--link-list">
-            <li>My Cookie Jar</li>
+          <ul class="mdl-mini-footer__link-list">
             <li>E-mail: </li>
             <li>Phone: </li>
             <li><a href="http://www.jswansol.com" target="_blank">Powered By: Swanson Solutions</a></li>
           </ul>
         </div>
       </footer>
-  </div>
+    </div>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
     <!-- <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
