@@ -227,6 +227,13 @@ body {
   color: red;
   font-size: 18px; }
 
+#submitButton {
+  width: 100%; }
+
+#costWrapper {
+  width: 100%;
+  text-align: center; }
+
 .mdl-grid {
   padding: 4px; }
 
@@ -234,7 +241,8 @@ body {
   margin: 4px; }
 
 .mdl-textfield {
-  display: block; }
+  display: block;
+  width: 100%; }
 
 .mdl-textfield__label {
   color: black; }
@@ -248,12 +256,16 @@ body {
   white-space: normal; }
   .mdl-data-table th {
     padding: 0 11px; }
+    .mdl-data-table th:first-of-type {
+      padding-left: 10px; }
   .mdl-data-table td {
     padding: 5px 18px 5px 0;
     vertical-align: middle;
     width: 13%; }
     .mdl-data-table td:first-child {
       width: 40%; }
+    .mdl-data-table td:first-of-type {
+      padding-left: 5px; }
   .mdl-data-table td.modifyTD {
     width: 20%; }
   .mdl-data-table .removeTD {

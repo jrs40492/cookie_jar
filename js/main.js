@@ -40,6 +40,8 @@ $(document).ready( function() {
     submitOrder();
   });
 
+  //[data[x].Food_ID, data[x].Name, data[x].Cost, 0, 0]
+  //Food_ID, Name, cost, amount, total
   function updateTotal(tableIndex, rowIndex, that, amount) {
     var total = 0;
     var index = indexMapper[tableIndex][rowIndex];
@@ -50,7 +52,13 @@ $(document).ready( function() {
     for (var x = 0; x < foodArray.length; x++) {
       total += parseFloat(foodArray[x][4]);
     }
-    $('.'+typeList[tableIndex]+'Cost').text('$' + total.toFixed(2));
+    $('#'+typeList[tableIndex]+'Cost').text('$' + total.toFixed(2));
+    total = 0;
+    $.each(typeList, function(index1, value) {
+      var price = $('#'+typeList[index1]+'Cost').text();
+      total += parseFloat(price.replace(/[^0-9\.]/g, ''));
+    });
+    $("#orderCost").text('$' + total.toFixed(2));
   }
 
   function submitOrder() {
@@ -112,7 +120,7 @@ function buildTables() {
   var titleList = ['Dropped Cookies', 'Bar Cookies', 'Cut-outs', 'Press Cookies', 'Monster Cookies', 'Pies', 'Scones', 'Biscotti', 'Sweet Breads/ Muffins'];
   var tableContents = '<tr><th class="mdl-data-table__cell--non-numeric">Kind</th><th>Price/Dozen</th><th>Quantity</th><th class="mdl-data-table__cell--non-numeric">Remove/Add</th><th>Total</th></tr></thead><tbody></tbody><tfoot><tr><td colspan="4">Total:</td>';
   for (var x = 0; x < titleList.length; x++) {
-    output += '<div class="mdl-typography--display-1">'+titleList[x]+'</div><table id="'+typeList[x]+'List" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp mdl-cell--12-col"><thead>' + tableContents + '<td class="'+typeList[x]+'Cost">$0.00</td></tr></tfoot></table>';
+    output += '<div class="mdl-typography--display-1">'+titleList[x]+'</div><table id="'+typeList[x]+'List" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp mdl-cell--12-col"><thead>' + tableContents + '<td id="'+typeList[x]+'Cost">$0.00</td></tr></tfoot></table>';
   }
   $('#tableWrapper').append(output);
 }

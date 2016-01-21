@@ -232,6 +232,10 @@ body {
   color: red; font-size: 18px;
 }
 
+#submitButton {width: 100%;}
+
+#costWrapper {width: 100%; text-align: center;}
+
 .mdl-grid {
   padding: 4px;
 }
@@ -242,6 +246,7 @@ body {
 
 .mdl-textfield {
   display: block;
+  width: 100%;
 }
 
 .mdl-textfield__label {
@@ -254,9 +259,12 @@ body {
 
 .mdl-data-table {
   white-space: normal;
-  th {padding: 0 11px;}
+  th {padding: 0 11px;
+    &:first-of-type {padding-left: 10px;}
+  }
   td {padding: 5px 18px 5px 0; vertical-align: middle; width: 13%;
     &:first-child {width: 40%}
+    &:first-of-type {padding-left: 5px;}
   }
   td.modifyTD {width: 20%;}
   .removeTD {padding-left: 14px;}
