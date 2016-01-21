@@ -255,7 +255,7 @@ body {
 .mdl-data-table {
   white-space: normal; }
   .mdl-data-table th {
-    padding: 0 11px; }
+    padding: 0 5px; }
     .mdl-data-table th:first-of-type {
       padding-left: 10px; }
   .mdl-data-table td {
@@ -263,7 +263,7 @@ body {
     vertical-align: middle;
     width: 13%; }
     .mdl-data-table td:first-child {
-      width: 40%; }
+      width: 30%; }
     .mdl-data-table td:first-of-type {
       padding-left: 5px; }
   .mdl-data-table td.modifyTD {
@@ -271,4 +271,5 @@ body {
   .mdl-data-table .removeTD {
     padding-left: 14px; }
   .mdl-data-table .decrement, .mdl-data-table .increment {
-    margin: 0 6%; }
+    margin: 0 3%;
+    width: auto; }
