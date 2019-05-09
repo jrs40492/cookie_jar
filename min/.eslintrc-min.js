@@ -1,0 +1,1 @@
+module.exports={extends:["eslint:recommended","google"],parserOptions:{ecmaVersion:7},rules:{"func-style":[2,"expression",{allowArrowFunctions:!0}],"max-len":["error",{code:130,ignoreComments:!0,ignoreStrings:!0,ignoreTemplateLiterals:!0}],"object-curly-spacing":["error","always"]},env:{browser:!0},globals:{$:!0}};

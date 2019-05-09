@@ -1,29 +1,107 @@
-/**
- * Copyright 2015 Google Inc. All Rights Reserved.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-/*
-Note: any .css or .scss files included in the 'styles' directory
-will be correctly compiled during `gulp serve` and `gulp`
- */
-
+/* User defined settings */
 html, body {
   font-family: 'Roboto', 'Helvetica', sans-serif;
   margin: 0;
   padding: 0;
 }
+
+body {
+  background-color: #F7F3DC;
+}
+
+#logo {
+  margin: 0 auto;
+  width: 605px;
+  height: 150px;
+}
+
+.hidden {
+  display: none;
+}
+
+.success {
+  background: green;
+  color: white;
+}
+
+#errorMessage {
+  color: red;
+  font-size: 18px;
+}
+
+#submitButton {
+  width: 100%;
+}
+
+#costWrapper {
+  width: 100%;
+  text-align: center;
+}
+
+.mdl-grid {
+  padding: 4px;
+}
+
+.mdl-cell {
+  margin: 4px;
+}
+
+.mdl-textfield {
+  display: block;
+  width: 100%;
+}
+
+.mdl-textfield__label {
+  color: black;
+}
+
+#tableWrapper {
+  .mdl-typography--display-1 {
+    text-align: center;
+    padding: 10px 0 5px;
+    text-decoration: underline;
+  }
+}
+
+.mdl-data-table {
+  white-space: normal;
+
+  th {padding: 0 5px;
+    &:first-of-type {
+      padding-left: 10px;
+    }
+  }
+
+  td {
+    padding: 5px 18px 5px 0;
+    vertical-align: middle;
+    width: 13%;
+
+    &:first-child {
+      width: 30%;
+    }
+    &:first-of-type {
+      padding-left: 5px;
+    }
+  }
+
+  td.modifyTD {
+    width: 20%;
+  }
+
+  .removeTD {
+    padding-left: 14px;
+  }
+
+  .decrement, .increment {
+    margin: 0 3%;
+    width: auto;}
+}
+
+
+
+
+/* Set default settings from MDL */
 .mdl-demo .mdl-layout__header-row {
   padding-left: 40px;
 }
@@ -210,63 +288,4 @@ html, body {
 }
 .mdl-demo .mdl-menu__container {
   z-index: 99;
-}
-
-body {
-  background-color: #F7F3DC;
-}
-
-#logo {
-  margin: 0 auto; width: 605px; height: 150px;
-}
-
-.disNone {
-  display: none;
-}
-
-.success {
-  background: green; color: white;
-}
-
-#errorMessage {
-  color: red; font-size: 18px;
-}
-
-#submitButton {width: 100%;}
-
-#costWrapper {width: 100%; text-align: center;}
-
-.mdl-grid {
-  padding: 4px;
-}
-
-.mdl-cell {
-  margin: 4px;
-}
-
-.mdl-textfield {
-  display: block;
-  width: 100%;
-}
-
-.mdl-textfield__label {
-  color: black;
-}
-
-#tableWrapper {
-  .mdl-typography--display-1 {text-align: center; padding: 10px 0 5px; text-decoration: underline;}
-}
-
-.mdl-data-table {
-  white-space: normal;
-  th {padding: 0 5px;
-    &:first-of-type {padding-left: 10px;}
-  }
-  td {padding: 5px 18px 5px 0; vertical-align: middle; width: 13%;
-    &:first-child {width: 30%}
-    &:first-of-type {padding-left: 5px;}
-  }
-  td.modifyTD {width: 20%;}
-  .removeTD {padding-left: 14px;}
-  .decrement, .increment {margin: 0 3%; width: auto;}
 }
