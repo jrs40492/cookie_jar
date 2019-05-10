@@ -1,11 +1,11 @@
-<?php 
+<?php
 require '../auth.php';
 require '../functions.php';
 
 if (!isset($_POST['firstName'])) {
   sendError(400, 'First Name is required.');
   exit();
-} 
+}
 
 if (!isset($_POST['lastName'])) {
   sendError(400, 'Last Name is required.');
@@ -59,7 +59,7 @@ $insertCustomer = $conx->prepare("INSERT INTO customers (
  ,city
  ,zip
  ,phone
- ,ordered) VALUES 
+ ,ordered) VALUES
  (?, ?, ?, ?, ?, ?, ?, NOW())");
 if (!$insertCustomer->execute(array($firstName, $lastName, $email, $street, $city, $zip, $phone))) {
   sendError(500, 'Unexepected error, please try again.');
@@ -72,7 +72,7 @@ $insertOrder = $conx->prepare("INSERT INTO orders (
   ,amount
   ,price
   ,total
-  ) 
+  )
   SELECT
   ?
   ,?
@@ -112,8 +112,6 @@ $updateTotal->execute(array($grandTotal, $id_customer));
 
 $address = $street . $city . ', NY'. $zip;
 
-$to = "jrs40492@gmail.com";
-$from = "admin@mycookiejarandmore.com";
 $subject = 'New My Cookie Jar Order';
 $message = '<!DOCTYPE html>
   <html>
@@ -136,10 +134,10 @@ $message = '<!DOCTYPE html>
       </div>
     </body>
   </html>';
-$headers = "From: $from\n";
+$headers = "From: $emailFrom\n";
 $headers .= "MIME-Version: 1.0\n";
 $headers .= "Content-type: text/html; charset=iso-8859-1\n";
-mail($to, $subject, $message, $headers);
+// mail($emailTo, $subject, $message, $headers);
 
 $to = $address;
 $from = "do-not-reply@mycookiejarandmore.com";
@@ -168,6 +166,6 @@ $message = '<!DOCTYPE html>
 $headers = "From: $from\n";
 $headers .= "MIME-Version: 1.0\n";
 $headers .= "Content-type: text/html; charset=iso-8859-1\n";
-mail($to, $subject, $message, $headers);
+// mail($to, $subject, $message, $headers);
 
 sendSuccess(200, 'Order submitted');
