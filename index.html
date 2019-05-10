@@ -88,138 +88,138 @@
               </p>
             </div>
           </section>
-          <section class="mdl-grid mdl-shadow--2dp">
-            <div
-              class="mdl-cell mdl-cell--7-col mdl-cell--12-col-tablet mdl-cell--12-col-phone"
+          <div class="mdl-grid">
+            <section
+              class="mdl-cell mdl-cell--7-col mdl-cell--12-col-tablet mdl-cell--12-col-phone mdl-shadow--2dp"
             >
               <div id="tableWrapper"></div>
-            </div>
-            <div
-              class="mdl-cell mdl-cell--5-col mdl-cell--12-col-tablet mdl-cell--12-col-phone"
+            </section>
+            <section
+              class="mdl-cell mdl-cell--5-col mdl-cell--12-col-tablet mdl-cell--12-col-phone mdl-shadow--2dp mdl-cell--top"
             >
-              <div class="mdl-cell--12-col">
-                <form id="order-form" onsubmit="return false;">
-                  <div
-                    class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"
-                  >
-                    <input
-                      class="mdl-textfield__input"
-                      type="text"
-                      id="firstName"
-                      autocomplete="given-name"
-                    />
-                    <label class="mdl-textfield__label" for="firstName"
-                      >First Name*</label
-                    >
-                  </div>
-                  <div
-                    class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"
-                  >
-                    <input
-                      class="mdl-textfield__input"
-                      type="text"
-                      id="lastName"
-                      autocomplete="family-name"
-                    />
-                    <label class="mdl-textfield__label" for="lastName"
-                      >Last Name*</label
-                    >
-                  </div>
-                  <div
-                    class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"
-                  >
-                    <input
-                      class="mdl-textfield__input"
-                      type="tel"
-                      pattern="-?[0-9()\- ]*(\.[0-9]+)?"
-                      id="phone"
-                      autocomplete="tel"
-                    />
-                    <label class="mdl-textfield__label" for="phone"
-                      >Phone</label
-                    >
-                    <span class="mdl-textfield__error"
-                      >Input is not a number!</span
-                    >
-                  </div>
-                  <div
-                    class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"
-                  >
-                    <input
-                      class="mdl-textfield__input"
-                      type="email"
-                      id="email"
-                      autocomplete="email"
-                    />
-                    <label class="mdl-textfield__label" for="email"
-                      >E-Mail*</label
-                    >
-                  </div>
-                  <div
-                    class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"
-                  >
-                    <input
-                      class="mdl-textfield__input"
-                      type="text"
-                      id="street"
-                      autocomplete="address-line1"
-                    />
-                    <label class="mdl-textfield__label" for="street"
-                      >Street*</label
-                    >
-                  </div>
-                  <div
-                    class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"
-                  >
-                    <input
-                      class="mdl-textfield__input"
-                      type="text"
-                      id="city"
-                      autocomplete="address-level2"
-                    />
-                    <label class="mdl-textfield__label" for="city">City*</label>
-                  </div>
-                  <div
-                    class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"
-                  >
-                    <input
-                      class="mdl-textfield__input"
-                      type="text"
-                      pattern="-?[0-9]*(\.[0-9]+)?"
-                      id="zip"
-                      autocomplete="postal-code"
-                    />
-                    <label class="mdl-textfield__label" for="zip">Zip*</label>
-                    <span class="mdl-textfield__error"
-                      >Input is not a number!</span
-                    >
-                  </div>
-                  <div id="costWrapper" class="mdl-typography--headline">
-                    Order Total: <span id="orderCost">$0.00</span>
-                  </div>
-                  <div id="errorMessage" class="hidden"></div>
-                  <button
-                    id="submitButton"
-                    class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect"
-                  >
-                    Submit Order
-                  </button>
-                </form>
+              <div
+                class="mdl-typography--display-1 mdl-typography--text-center"
+              >
+                Order
               </div>
-            </div>
-          </section>
+              <form id="order-form" onsubmit="return false;">
+                <div
+                  class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"
+                >
+                  <input
+                    class="mdl-textfield__input"
+                    type="text"
+                    id="firstName"
+                    autocomplete="given-name"
+                  />
+                  <label class="mdl-textfield__label" for="firstName"
+                    >First Name*</label
+                  >
+                </div>
+                <div
+                  class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"
+                >
+                  <input
+                    class="mdl-textfield__input"
+                    type="text"
+                    id="lastName"
+                    autocomplete="family-name"
+                  />
+                  <label class="mdl-textfield__label" for="lastName"
+                    >Last Name*</label
+                  >
+                </div>
+                <div
+                  class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"
+                >
+                  <input
+                    class="mdl-textfield__input"
+                    type="tel"
+                    pattern="-?[0-9()\- ]*(\.[0-9]+)?"
+                    id="phone"
+                    autocomplete="tel"
+                  />
+                  <label class="mdl-textfield__label" for="phone">Phone</label>
+                  <span class="mdl-textfield__error"
+                    >Input is not a number!</span
+                  >
+                </div>
+                <div
+                  class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"
+                >
+                  <input
+                    class="mdl-textfield__input"
+                    type="email"
+                    id="email"
+                    autocomplete="email"
+                  />
+                  <label class="mdl-textfield__label" for="email"
+                    >E-Mail*</label
+                  >
+                </div>
+                <div
+                  class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"
+                >
+                  <input
+                    class="mdl-textfield__input"
+                    type="text"
+                    id="street"
+                    autocomplete="address-line1"
+                  />
+                  <label class="mdl-textfield__label" for="street"
+                    >Street*</label
+                  >
+                </div>
+                <div
+                  class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"
+                >
+                  <input
+                    class="mdl-textfield__input"
+                    type="text"
+                    id="city"
+                    autocomplete="address-level2"
+                  />
+                  <label class="mdl-textfield__label" for="city">City*</label>
+                </div>
+                <div
+                  class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"
+                >
+                  <input
+                    class="mdl-textfield__input"
+                    type="text"
+                    pattern="-?[0-9]*(\.[0-9]+)?"
+                    id="zip"
+                    autocomplete="postal-code"
+                  />
+                  <label class="mdl-textfield__label" for="zip">Zip*</label>
+                  <span class="mdl-textfield__error"
+                    >Input is not a number!</span
+                  >
+                </div>
+                <div id="costWrapper" class="mdl-typography--headline">
+                  Order Total: <span id="orderCost">$0.00</span>
+                </div>
+                <div id="errorMessage" class="hidden"></div>
+                <button
+                  id="submitButton"
+                  class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect"
+                  disabled
+                >
+                  Submit Order
+                </button>
+              </form>
+            </section>
+          </div>
         </div>
       </main>
       <footer class="mdl-mini-footer mdl-cell--hide-phone">
         <div class="mdl-mini-footer__left-section">
           <a href="/index.html">
             <div class="mdl-logo">
-              My Cookie Jar
+              My Cookie Jar & More
             </div>
           </a>
           <ul class="mdl-mini-footer__link-list">
-            <!-- <li>E-mail: </li>
-            <li>Phone: </li>-->
             <li>
               <a href="http://www.jacobrswanson.com" target="_blank"
                 >Created by Jacob Swanson</a
@@ -233,15 +233,20 @@
         <button class="mdl-snackbar__action" type="button"></button>
       </div>
     </div>
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-    <!-- <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-XXXXX-X', 'auto');
-      ga('send', 'pageview');
-    </script> -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-35979914-7"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-35979914-7');
+    </script>
   </body>
 </html>
 

@@ -34,7 +34,7 @@ $(document).ready(() => {
         gOrder[orderIndex] = order;
       }
     }
-    
+
     updateTotal(food.id_type);
   });
 
@@ -61,7 +61,7 @@ $(document).ready(() => {
       updateRow(e, order.amount, order.cost);
       gOrder[orderIndex] = order;
     }
-    
+
     updateTotal(food.id_type);
   });
 
@@ -217,8 +217,8 @@ const upgradeDom = (x) => {
 const buildTables = (types) => {
   let output = "";
   types.forEach((type) => {
-    output += `<div class="mdl-typography--display-1">${type.title}</div>`;
-    output += `<table id="type-${type.id_type}" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp mdl-cell--12-col">`;
+    output += `<div class="mdl-typography--display-1 mdl-typography--text-center">${type.title}</div>`;
+    output += `<table id="type-${type.id_type}" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">`;
     // Table Header
     output += `<thead><tr><th class="mdl-data-table__cell--non-numeric">Kind</th><th>${type.quantity}</th>`;
     output += `<th>Quantity</th><th class="mdl-data-table__cell--non-numeric">Remove/Add</th><th>Total</th>`;
@@ -243,7 +243,7 @@ const getTypes = () => {
 const getFoods = () => {
   $.getJSON('get/foods.php', {})
   .done((foods) => {
-    
+
     if (!foods || foods.length === 0) {
       handleError("There are currently no products to order");
       return;
@@ -281,7 +281,7 @@ const getFoods = () => {
 
     // Loop through outputs and add to correct table
     output.forEach((list, index) => {
-      $(`#type-${index} tbody`).append(list);  
+      $(`#type-${index} tbody`).append(list);
     });
 
     gFoods = foods;
